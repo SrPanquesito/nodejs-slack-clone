@@ -1,0 +1,26 @@
+{
+  "name": "slack-clone",
+  "version": "1.0.0",
+  "description": "From Ben Award course series. Main difference is use of updated libraries and replacement of Express for Hapi and React for Angular.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --exec babel-node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.19.3",
+    "@babel/core": "^7.20.5",
+    "@babel/node": "^7.20.5",
+    "@babel/preset-env": "^7.20.2",
+    "eslint": "^8.30.0",
+    "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "@hapi/hapi": "^20.2.2",
+    "apollo-server-hapi": "^3.11.1",
+    "graphql": "^16.6.0"
+  }
+}
