@@ -1,7 +1,7 @@
 {
   "name": "slack-clone",
   "version": "1.0.0",
-  "description": "From Ben Award course series. Main difference is use of updated libraries and replacement of Express for Hapi and React for Angular.",
+  "description": "From Ben Award course series. Main difference is use of updated libraries and replacement of Express for Hapi, PostgreSQL for MySQL and React for Angular.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -21,6 +21,8 @@
   "dependencies": {
     "@hapi/hapi": "^20.2.2",
     "apollo-server-hapi": "^3.11.1",
-    "graphql": "^16.6.0"
+    "graphql": "^16.6.0",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.28.0"
   }
 }
