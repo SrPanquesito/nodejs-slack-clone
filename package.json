@@ -21,6 +21,7 @@
   "dependencies": {
     "@hapi/hapi": "^20.2.2",
     "apollo-server-hapi": "^3.11.1",
+    "dotenv": "^16.0.3",
     "graphql": "^16.6.0",
     "mysql2": "^2.3.3",
     "sequelize": "^6.28.0"
