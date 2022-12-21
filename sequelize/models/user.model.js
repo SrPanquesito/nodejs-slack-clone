@@ -3,7 +3,7 @@ const { DataTypes } = require('sequelize');
 // We export a function that defines the model.
 // This function will automatically receive as parameter the Sequelize connection object.
 module.exports = (sequelize) => {
-	const User = sequelize.define('user', {
+	sequelize.define('user', {
 		// The following specification of the 'id' attribute could be omitted
 		// since it is the default.
 		id: {
@@ -26,10 +26,4 @@ module.exports = (sequelize) => {
 			type: DataTypes.STRING,
 		},
 	});
-
-	User.associate = (models) => {
-		User.belongsToMany(models.team, { through: 'member', foreignKey: 'userId' })
-	}
-
-	return User
 };

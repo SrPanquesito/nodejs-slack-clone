@@ -27,15 +27,14 @@ async function startApolloServer(typeDefs, resolvers) {
 }
 
 async function startDatabase() {
-  await sequelize.sync({ force: true });
+  await sequelize.sync();
 }
 
 /* Start */
 try {
     startDatabase();
-    console.log(`Database sync`);
     startApolloServer(typeDefs, resolvers);
     console.log(`Server init on http://localhost:${process.env.PORT || DEFAULT_PORT}`);
 } catch(err) {
-    console.log(`ERROR: Fatal error. Sequelize / Apollo Server couldn't init.`);
+    console.log(`FATAL ERROR: `, err);
 }
