@@ -6,9 +6,4 @@ type Channel {
     messages: [Message!]!
     users: [User!]!
 }
-
-type Query {
-    getAllChannels(): [Channel!]!
-    getChannel(id: Int!): Channel!
-}
-`
+`;

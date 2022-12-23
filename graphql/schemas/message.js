@@ -5,4 +5,4 @@ type Message {
     user: User!
     channel: Channel!
 }
-`
+`;
