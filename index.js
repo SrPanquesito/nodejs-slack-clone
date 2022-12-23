@@ -24,7 +24,12 @@ async function startApolloServer(typeDefs, resolvers) {
       csrfPrevention: true,
       cache: 'bounded',
       plugins: [ApolloServerPluginStopHapiServer({ hapiServer: app }), ApolloServerPluginLandingPageLocalDefault({ embed: true })],
-    })
+    }),
+    dataSources: () => {
+      return {
+        sequelizeModels: sequelize.models,
+      };
+    }
   });
 
   await server.start();
